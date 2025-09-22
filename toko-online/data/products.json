@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "name": "Laptop Gaming",
+        "price": 35000000,
+        "description": "Laptop berperforma tinggi untuk kebutuhan gaming anda"
+    },
+    {
+        "id": 2,
+        "name": "Smartphone Pro",
+        "price": 12000000,
+        "description": "Smartphone dengan kamera profesional dan performa cepat"
+    },
+    {
+        "id": 3,
+        "name": "Headset Wireless",
+        "price": 2500000,
+        "description": "Headset tanpa kabel dengan kualitas suara jernih"
+    },
+    {
+        "id": 4,
+        "name": "Smartwatch Sport",
+        "price": 3000000,
+        "description": "Jam tangan pintar dengan fitur olahraga lengkap"
+    },
+    {
+        "id": 5,
+        "name": "Tablet Edukasi",
+        "price": 6000000,
+        "description": "Tablet ringan untuk belajar dan hiburan"
+    },
+    {
+        "id": 6,
+        "name": "Keyboard Mechanical",
+        "price": 1500000,
+        "description": "Keyboard dengan switch mekanikal dan backlight RGB"
+    },
+    {
+        "id": 7,
+        "name": "Mouse Gaming",
+        "price": 800000,
+        "description": "Mouse presisi tinggi dengan desain ergonomis"
+    },
+    {
+        "id": 8,
+        "name": "Monitor UltraWide",
+        "price": 7000000,
+        "description": "Monitor ultrawide untuk multitasking dan desain"
+    },
+    {
+        "id": 9,
+        "name": "Printer All-in-One",
+        "price": 2500000,
+        "description": "Printer multifungsi untuk print, scan, dan copy"
+    },
+    {
+        "id": 10,
+        "name": "Camera Mirrorless",
+        "price": 15000000,
+        "description": "Kamera mirrorless dengan hasil foto profesional"
+    },
+    {
+        "id": 11,
+        "name": "Speaker Bluetooth",
+        "price": 1200000,
+        "description": "Speaker portable dengan suara bass kuat"
+    },
+    {
+        "id": 12,
+        "name": "Drone 4K",
+        "price": 18000000,
+        "description": "Drone kamera 4K dengan fitur stabilisasi"
+    },
+    {
+        "id": 13,
+        "name": "Powerbank FastCharge",
+        "price": 700000,
+        "description": "Powerbank kapasitas besar dengan fast charging"
+    },
+    {
+        "id": 14,
+        "name": "Earbuds TWS",
+        "price": 900000,
+        "description": "Earbuds wireless dengan fitur noise cancellation"
+    },
+    {
+        "id": 15,
+        "name": "Smart TV 55 Inch",
+        "price": 10000000,
+        "description": "Smart TV dengan resolusi 4K dan aplikasi bawaan"
+    },
+    {
+        "id": 16,
+        "name": "External SSD 1TB",
+        "price": 2500000,
+        "description": "SSD eksternal dengan kecepatan transfer tinggi"
+    },
+    {
+        "id": 17,
+        "name": "Router WiFi 6",
+        "price": 1800000,
+        "description": "Router modern dengan teknologi WiFi 6 super cepat"
+    },
+    {
+        "id": 18,
+        "name": "Kamera Action",
+        "price": 4000000,
+        "description": "Kamera action tahan air untuk aktivitas outdoor"
+    },
+    {
+        "id": 19,
+        "name": "Console Gaming",
+        "price": 9000000,
+        "description": "Konsol game generasi terbaru dengan grafis menawan"
+    },
+    {
+        "id": 20,
+        "name": "Smart Home Hub",
+        "price": 2200000,
+        "description": "Perangkat penghubung untuk kontrol smart home"
+    }
+]
