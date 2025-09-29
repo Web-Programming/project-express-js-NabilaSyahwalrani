@@ -1,3 +1,10 @@
-<h1><%= message %></h1>
-<h2><%= error.status %></h2>
-<pre><%= error.stack %></pre>
+<% layout('layout') %>
+
+<div class="container mt-5 text-center">
+  <h1 class="display-4">Oops!</h1>
+  <p><%= message %></p>
+  <% if (error.status) { %>
+    <p>Status: <%= error.status %></p>
+  <% } %>
+  <a href="/" class="btn btn-primary">Kembali ke Home</a>
+</div>
