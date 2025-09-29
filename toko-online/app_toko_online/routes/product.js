@@ -1,8 +1,8 @@
 var express = require('express');
 var router = express.Router();
-var products = require('../data/products.json');
+var products = require('../../data/products.json');
 
-// 🔎 Search Produk (letakkan di atas)
+//  Search Produk
 router.get('/search', function (req, res) {
   const q = req.query.q ? req.query.q.toLowerCase() : '';
   let filtered = products;
@@ -20,7 +20,7 @@ router.get('/search', function (req, res) {
   });
 });  
 
-// GET detail produk by id (letakkan di bawah)
+// GET detail produk by id 
 router.get('/:id', function (req, res, next) {
   const productId = parseInt(req.params.id); // id dari URL
   const product = products.find((p) => p.id === productId);
