@@ -3,12 +3,13 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+//panggil file koneksi database
+require('./app_toko_online/models/db'); 
 
 //perbaikan 2
 var indexRouter = require('./app_toko_online/routes/index');
 var usersRouter = require('./app_toko_online/routes/users');
-var productRouter = require('./app_toko_online/routes/product'); // ✅ router produk
-
+var productRouter = require('./app_toko_online/routes/product'); //  router produk
 var engine = require('ejs-blocks'); // pakai ejs-blocks
 var app = express();
 

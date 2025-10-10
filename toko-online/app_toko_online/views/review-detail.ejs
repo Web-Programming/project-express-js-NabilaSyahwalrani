@@ -1,0 +1,20 @@
+<% layout('layout') %>
+
+<div class="container mt-5">
+  <div class="card shadow p-4">
+    <h1 class="mb-3"><%= title %></h1>
+
+    <ul class="list-group mb-3">
+      <li class="list-group-item">
+        <strong>ID Produk:</strong> <%= productId %>
+      </li>
+      <li class="list-group-item">
+        <strong>ID Ulasan:</strong> <%= reviewId %>
+      </li>
+    </ul>
+
+    <a href="/product/<%= productId %>" class="btn btn-primary">
+      Kembali ke Produk
+    </a>
+  </div>
+</div>
