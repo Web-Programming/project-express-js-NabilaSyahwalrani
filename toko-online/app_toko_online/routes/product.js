@@ -3,8 +3,10 @@ var router = express.Router();
 var products = require('../../data/products.json');
 var productsController = require('../controllers/product');
 
+router.get("/apiall", productsController.all);
 router.get("/all", productsController.index);
 router.get("/id", productsController.detail);
+
 
 //  Search Produk
 router.get('/search', function (req, res) {

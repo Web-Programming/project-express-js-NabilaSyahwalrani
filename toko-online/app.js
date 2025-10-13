@@ -10,6 +10,10 @@ require('./app_toko_online/models/db');
 var indexRouter = require('./app_toko_online/routes/index');
 var usersRouter = require('./app_toko_online/routes/users');
 var productRouter = require('./app_toko_online/routes/product'); //  router produk
+
+var apiproductRouter = require('./app_toko_online/routes/api/product'); // router api produk
+
+// view engine setup
 var engine = require('ejs-blocks'); // pakai ejs-blocks
 var app = express();
 
@@ -28,6 +32,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/produk', productRouter);
+app.use('/api/produk', apiproductRouter); // router api produk
 
 // serving bootstrap
 app.use(
