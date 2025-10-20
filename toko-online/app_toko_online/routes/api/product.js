@@ -6,7 +6,7 @@ function requireJson(req, res, next){
     if(req.headers['content-type'] != 'application/json'){
       return res.status(406).json({
                 status:false, 
-                message: "Header harus application/json"
+                message: 'Header "Content-Type" harus "application/json".'
             });
     }
     next();

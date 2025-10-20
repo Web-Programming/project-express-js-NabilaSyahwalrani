@@ -1,0 +1,42 @@
+
+### GET All Users
+GET http://localhost:3000/api/user
+
+### Insert New User
+POST http://localhost:3000/api/user
+content-type: application/json
+
+{
+    "username": "johndoe",
+    "email": "johndoe@example.com",
+    "password": "password123",
+    "address": "Jl. Contoh No. 123, Jakarta",
+    "isAdmin": false
+}
+
+### Insert Admin User
+POST http://localhost:3000/api/user
+content-type: application/json
+
+{
+    "username": "adminuser",
+    "email": "admin@example.com",
+    "password": "admin123",
+    "address": "Jl. Admin No. 456, Bandung",
+    "isAdmin": true
+}
+
+### Detail User (Replace with actual user ID)
+GET http://localhost:3000/api/user/68f21203dc9df00aa4cfaf94
+
+### Update User (Replace with actual user ID)
+PUT http://localhost:3000/api/user/68f21203dc9df00aa4cfaf94
+content-type: application/json
+
+{
+    "address": "Jl. Update No. 789, Surabaya",
+    "email": "newemail@example.com"
+}
+
+### Delete User (Replace with actual user ID)
+DELETE http://localhost:3000/api/user/67113abc123def456789abcd
