@@ -1,41 +1,42 @@
 const mongoose = require('mongoose');
 
-const UserSchema = new mongoose.Schema({
-  username: {
+const orderSchema = new mongoose.Schema({
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',   // relasi ke model User
+    required: true
+  },
+  orderItems: [
+    {
+      product: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Product',   // relasi ke model Product
+        required: true
+      },
+      quantity: {
+        type: Number,
+        required: true,
+        min: 1
+      },
+      priceAtOrder: {
+        type: Number,
+        required: true
+      }
+    }
+  ],
+  totalAmount: {
+    type: Number,
+    required: true
+  },
+  status: {
     type: String,
-    required: [true, 'Nama pengguna harus diisi.'],
-    unique: true, // Tidak boleh ada username yang sama
-    trim: true,
+    enum: ['Pending', 'Processing', 'Shipped', 'Delivered', 'Cancelled'],
+    default: 'Pending'
   },
-  email: {
-    type: String,
-    required: [true, 'Email harus diisi.'],
-    unique: true,
-    match: [
-      /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
-      'Harap isi alamat email yang valid',
-    ], // Regex untuk validasi format email
-  },
-  password: {
-    type: String,
-    required: [true, 'Kata sandi harus diisi.'],
-    minlength: [6, 'Kata sandi minimal 6 karakter.'],
-    select: false, // Penting: Jangan sertakan password saat query GET
-  },
-  address: {
-    type: String,
-    default: 'Belum diisi',
-  },
-  isAdmin: {
-    type: Boolean,
-    default: false,
-  },
-  createdAt: {
+  orderDate: {
     type: Date,
-    default: Date.now,
-  },
-});
+    default: Date.now
+  }
+}, { timestamps: true });
 
-//Buat model dari Schema
-const User = mongoose.model('User', UserSchema);
-module.exports = User;
+module.exports = mongoose.model('Order', orderSchema);

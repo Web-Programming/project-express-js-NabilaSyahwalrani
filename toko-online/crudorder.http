@@ -1,0 +1,98 @@
+### GET All Orders (Admin Only)
+GET http://localhost:3000/api/orders
+
+### Create New Order
+POST http://localhost:3000/api/orders
+content-type: application/json
+
+{
+    "isAdmin": true,
+    "user": "68f5f80500964c6ea40e6012",
+    "orderItems": [
+        {
+            "product": "68ecc2b44d49272f5636f322",
+            "quantity": 1
+        },
+        {
+            "product": "68f5f84400964c6ea40e6017",
+            "quantity": 1
+        }
+    ]
+}
+
+### Create Order with Single Item
+POST http://localhost:3000/api/orders
+content-type: application/json
+
+{
+    "user": "68f5f80500964c6ea40e6012",
+    "orderItems": [
+        {
+            "product": "68ecc2b44d49272f5636f322",
+            "quantity": 1
+        }
+    ]
+}
+
+### Get Order Detail (Replace with actual order ID)
+GET http://localhost:3000/api/orders/68f5f8d200964c6ea40e601b
+
+### Update Order Status to Processing (Admin Only - Replace with actual order ID)
+PUT http://localhost:3000/api/orders/68f5f8d200964c6ea40e601b
+content-type: application/json
+
+{
+    "status": "Processing"
+}
+
+### Update Order Status to Shipped (Admin Only - Replace with actual order ID)
+PUT http://localhost:3000/api/orders/68f5f8d200964c6ea40e601b
+content-type: application/json
+
+{
+    "status": "Shipped"
+}
+
+### Update Order Status to Delivered (Admin Only - Replace with actual order ID)
+PUT http://localhost:3000/api/orders/68f5f80500964c6ea40e6012
+content-type: application/json
+
+{
+    "status": "delivered"
+}
+
+### Update Order Status to Cancelled (Admin Only - Replace with actual order ID)
+PUT http://localhost:3000/api/orders/68f5f80500964c6ea40e6012
+content-type: application/json
+
+{
+    "status": "cancelled"
+}
+
+### Test Order with Invalid Product ID (Should return 404)
+POST http://localhost:3000/api/orders
+content-type: application/json
+
+{
+    "user": "68f5f80500964c6ea40e6012",
+    "orderItems": [
+        {
+            "product": "000000000000000000000000",
+            "quantity": 1
+        }
+    ]
+}
+
+### Test Order with Invalid User ID (Should return validation error)
+POST http://localhost:3000/api/orders
+content-type: application/json
+
+{
+    "user": "000000000000000000000000",
+    "orderItems": [
+        {
+            "product": "68ecc2b44d49272f5636f322",
+            "quantity": 1
+        }
+    ]
+}
